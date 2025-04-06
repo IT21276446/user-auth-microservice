@@ -25,6 +25,13 @@ jobs:
     - name: Run lint or test (optional)
       run: echo "No tests defined yet" 
 
+    - name: SonarCloud Analysis
+      uses: sonarsource/sonarcloud-github-action@v1.0
+      with:
+        token: ${{ secrets.SONAR_TOKEN }}
+      env:
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
     - name: Run Snyk to check for vulnerabilities
       uses: snyk/actions/node@master
       with:
