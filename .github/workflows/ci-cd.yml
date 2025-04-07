@@ -12,7 +12,9 @@ jobs:
 
     steps:
     - name: Checkout source code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Important for SonarCloud analysis
 
     - name: Set up Node.js
       uses: actions/setup-node@v3
@@ -26,13 +28,7 @@ jobs:
       run: echo "No tests defined yet" 
 
     - name: SonarCloud Analysis
-      uses: sonarsource/sonarcloud-github-action@v2.0.2
-      with:
-        projectBaseDir: .
-        args: >
-          -Dsonar.projectKey=IT21276446_user-auth-microservice
-          -Dsonar.organization=it21276446
-          -Dsonar.host.url=https://sonarcloud.io
+      uses: SonarSource/sonarqube-scan-action@v5
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
