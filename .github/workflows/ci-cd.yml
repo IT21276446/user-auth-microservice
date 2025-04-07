@@ -28,7 +28,11 @@ jobs:
     - name: SonarCloud Analysis
       uses: sonarsource/sonarcloud-github-action@v2.0.2
       with:
-        token: ${{ secrets.SONAR_TOKEN }}
+        projectBaseDir: .
+        args: >
+          -Dsonar.projectKey=IT21276446_user-auth-microservice
+          -Dsonar.organization=it21276446
+          -Dsonar.host.url=https://sonarcloud.io
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
