@@ -1,6 +1,7 @@
 {
     "family": "auth-microservice-task",
     "networkMode": "awsvpc",
+    "executionRoleArn": "arn:aws:iam::533267086189:role/ecsTaskExecutionRole",
     "containerDefinitions": [
       {
         "name": "auth-service",
