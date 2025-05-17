@@ -5,7 +5,7 @@
     "containerDefinitions": [
       {
         "name": "auth-service",
-        "image": "docker.io/ashviniw/auth-service:latest",
+        "image": "ashviniw/auth-service:latest",
         "portMappings": [
           {
             "containerPort": 5000,
