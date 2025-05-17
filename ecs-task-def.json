@@ -11,7 +11,17 @@
             "protocol": "tcp"
           }
         ],
-        "essential": true
+        "essential": true,
+        "secrets": [
+          {
+            "name": "MONGODB_URI",
+            "valueFrom": "/auth/MONGODB_URI"
+          },
+          {
+            "name": "JWT_SECRET",
+            "valueFrom": "/auth/JWT_SECRET"
+          }
+        ]
       }
     ],
     "requiresCompatibilities": [
