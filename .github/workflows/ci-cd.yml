@@ -72,6 +72,6 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: user-uath-service
+        service: user-auth-service
         cluster: auth-microservice-cluster
         wait-for-service-stability: true
