@@ -1,0 +1,22 @@
+{
+    "family": "auth-microservice-task",
+    "networkMode": "awsvpc",
+    "containerDefinitions": [
+      {
+        "name": "auth-service",
+        "image": "docker.io/ashviniw/auth-service:latest",
+        "portMappings": [
+          {
+            "containerPort": 5000,
+            "protocol": "tcp"
+          }
+        ],
+        "essential": true
+      }
+    ],
+    "requiresCompatibilities": [
+      "FARGATE"
+    ],
+    "cpu": "256",
+    "memory": "512"
+  }
