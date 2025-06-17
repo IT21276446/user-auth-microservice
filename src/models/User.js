@@ -26,3 +26,5 @@ UserSchema.methods.matchPassword = async function(enteredPassword) {
 
 //Sample comment fot the testing
 module.exports = mongoose.model('User', UserSchema);
+
+//test comment
